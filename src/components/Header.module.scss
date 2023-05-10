@@ -1,0 +1,13 @@
+.header {
+  font-size: 24px;
+  margin: 40px 100px 0 100px;
+  ul {
+    li {
+      cursor: pointer;
+      margin-left: 57px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
