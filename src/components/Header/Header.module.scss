@@ -1,0 +1,37 @@
+@use "../../assets/styles/mixins" as mixin;
+
+.header {
+  max-width: 1240px;
+  margin: auto;
+  padding: 0 20px 63px;
+  @include mixin.sm-lt {
+    padding: 0 20px 20px;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img {
+      @include mixin.sm-lt {
+        width: 145px;
+      }
+    }
+    ul {
+      display: flex;
+      gap: 57px;
+      @include mixin.xs {
+        gap: 10px;
+      }
+      li {
+        cursor: pointer;
+        font-size: clamp(12px, 2.5vw, 24px);
+        @include mixin.sm-lt {
+          text-transform: uppercase;
+        }
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@use "../../assets/styles/mixins" as mixin;
+.footer {
+  background-color: black;
+  color: white;
+  font-size: clamp(12px, 2.5vw, 24px);
+  padding-top: 66px;
+  @include mixin.sm-lt {
+    margin-top: 20px;
+  }
+}
