@@ -1,14 +1,14 @@
-import styles from "./Content.module.scss";
+import styles from "./Homepage.module.scss";
 import { data } from "../../data/accomodations";
-import Accomodation from "../Accomodation/Accomodation";
-import Banner from "../Banner/Banner";
+import Accomodation from "./Accomodation/Accomodation";
+import Banner from "../../components/Banner/Banner";
 
-function Content() {
+function Homepage() {
   const accomodations = data;
   return (
     <div className="flex-fill container">
       <Banner />
-      <div className={styles.contentCard}>
+      <div className={styles.homepageCard}>
         <div className={styles.grid}>
           {accomodations.map((accomodation) => (
             <Accomodation
@@ -23,4 +23,4 @@ function Content() {
   );
 }
 
-export default Content;
+export default Homepage;

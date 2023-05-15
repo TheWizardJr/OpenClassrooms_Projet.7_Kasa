@@ -1,13 +1,16 @@
+import { Outlet } from "react-router-dom";
 import styles from "./App.module.scss";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
-import Content from "./components/Homepage/Content";
+import { Suspense } from "react";
 
 function App() {
   return (
     <div className={styles.appContainer}>
       <Header />
-      <Content />
+      <Suspense>
+        <Outlet />
+      </Suspense>
       <Footer />
     </div>
   );
