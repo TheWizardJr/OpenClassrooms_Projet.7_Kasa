@@ -41,5 +41,8 @@
     font-weight: 500;
     z-index: 20;
     font-size: clamp(24px, 5vw, 48px);
+    @include mixin.xxs {
+      padding-left: 16px;
+    }
   }
 }
