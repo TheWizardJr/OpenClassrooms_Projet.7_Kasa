@@ -7,7 +7,9 @@ function Header() {
     <header className={`${styles.header}`}>
       <nav>
         <div>
-          <img src={logo} alt="logo kasa" />
+          <NavLink to="/">
+            <img src={logo} alt="logo kasa" />
+          </NavLink>
         </div>
         <ul>
           <NavLink

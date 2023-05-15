@@ -1,0 +1,36 @@
+@use "../../assets/styles/mixins" as mixin;
+
+.notfound {
+    text-align: center;
+  h1 {
+    font-size: 288px;
+    font-weight: 700;
+    line-height: 410px;
+    @include mixin.sm-lt {
+        font-size: 96px;
+        line-height: 136px;
+        margin-top: 199px;
+    }
+  }
+  p {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 51px;
+    margin: 0;
+    @include mixin.sm-lt {
+        font-size: 18px;
+        line-height: 25px;
+    }
+  }
+  a {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25px;
+    text-decoration: underline;
+    padding: 182px 0 160px;
+    @include mixin.sm-lt {
+        font-size: 14px;
+        line-height: 20px;
+    }
+  }
+}
