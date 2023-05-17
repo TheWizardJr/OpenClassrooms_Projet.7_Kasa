@@ -1,0 +1,57 @@
+@use "../../../assets/styles/mixins" as mixin;
+
+.about {
+  max-width: 1023px;
+  width: 100%;
+  margin-block: 31px;
+  @include mixin.sm-lt {
+  }
+}
+
+.withmargin {
+  margin-bottom: 31px;
+  @include mixin.sm-lt {
+    margin-bottom: 19px;
+  }
+}
+
+.collapse {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: var(--border-radius-3);
+  padding-inline: 18px;
+  height: 47px;
+  cursor: pointer;
+  @include mixin.sm-lt {
+    padding-inline: 12px;
+    height: 30px;
+  }
+  p {
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    @include mixin.sm-lt {
+      font-size: 13px;
+    }
+  }
+}
+
+.description {
+  background-color: var(--background-color);
+  border-radius: var(--border-radius-3);
+  p {
+    margin: 0;
+    padding: 27px 27px 27px 18px;
+    font-size: 24px;
+    font-weight: 400;
+    @include mixin.sm-lt {
+      font-size: 12px;
+      padding: 17px 7px 17px 12px;
+    }
+  }
+}

@@ -23,9 +23,11 @@
   padding: 50px;
   border-radius: var(--border-radius-1);
   background-color: var(--background-color);
+  margin-block: 43px;
   @include mixin.sm-lt {
     border-radius: none;
     background-color: white;
     padding: 0;
+    margin-block: 22px;
   }
 }

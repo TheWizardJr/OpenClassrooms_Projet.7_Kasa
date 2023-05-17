@@ -1,7 +1,11 @@
+import Banner from "../../components/Banner/Banner";
+import Collapse from "./Collapse/Collapse";
+
 function About() {
   return (
-    <div>
-      <h1>About</h1>
+    <div className="container flex-fill">
+      <Banner />
+      <Collapse />
     </div>
   );
 }
