@@ -4,6 +4,7 @@
   color: white;
   font-size: clamp(12px, 2.5vw, 24px);
   padding-top: 66px;
+  margin-top: 50px;
   @include mixin.sm-lt {
     margin-top: 20px;
     padding: 0;

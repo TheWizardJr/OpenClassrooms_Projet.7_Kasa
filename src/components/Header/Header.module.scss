@@ -15,6 +15,9 @@
       @include mixin.sm-lt {
         width: 145px;
       }
+      @include mixin.xs {
+        width: 100px;
+      }
     }
     ul {
       display: flex;

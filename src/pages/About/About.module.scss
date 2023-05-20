@@ -1,0 +1,31 @@
+@use "../../assets/styles/mixins" as mixin;
+
+
+.about {
+    max-width: 1023px;
+    width: 100%;
+    margin-block: 31px;
+    @include mixin.sm-lt {
+    }
+    h3 {
+      font-size: 24px;
+      margin: 0;
+      padding: 0;
+      font-weight: 500;
+      @include mixin.sm-lt {
+        font-size: 18.5px;
+      }
+      @include mixin.xs {
+        font-size: 13px;
+      }
+    }
+    p {
+      padding: 27px 27px 27px 18px;
+      margin: 0;
+      font-size: 24px;
+      font-weight: 400;
+      @include mixin.sm-lt {
+        font-size: 12px;
+      }
+    }
+  }

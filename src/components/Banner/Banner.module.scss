@@ -28,17 +28,12 @@
       rgba(0, 0, 0, 0.5) 100%
     );
   }
-  img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
   h1 {
     position: absolute;
     color: white;
     font-weight: 500;
     z-index: 20;
-    font-size: clamp(24px, 5vw, 48px);
+    font-size: clamp(20px, 5vw, 48px);
     @include mixin.xxs {
       padding-left: 16px;
     }
