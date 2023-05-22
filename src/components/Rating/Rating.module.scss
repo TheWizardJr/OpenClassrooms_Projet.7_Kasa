@@ -1,0 +1,26 @@
+@use "../../assets/styles/mixins" as mixin;
+
+.rating {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 15px;
+  @include mixin.sm-lt {
+    margin-top: 0;
+  }
+  i {
+    font-size: 20px;
+    margin-left: 16px;
+    @include mixin.sm-lt {
+      margin-right: 6px;
+      margin-left: 0;
+      font-size: 17px;
+    }
+    @include mixin.xs {
+      font-size: 14px;
+    }
+  }
+  .emptyStar {
+    color: var(--grey);
+  }
+}

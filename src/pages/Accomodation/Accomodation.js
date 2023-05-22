@@ -3,6 +3,7 @@ import { data } from "../../data/accomodations";
 import Collapse from "../../components/Collapse/Collapse";
 import { useParams } from "react-router-dom";
 import Slider from "../../components/Slider/Slider";
+import Rating from "../../components/Rating/Rating";
 
 function Accomodation() {
   const idAccomodation = useParams().id;
@@ -33,28 +34,18 @@ function Accomodation() {
                 </div>
                 <img src={dataAccomodation.host.picture} alt="" />
               </div>
-              <div className={styles.rating}>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-              </div>
+              <Rating rating={dataAccomodation.rating} />
             </div>
           </div>
           <div className={styles.collapse}>
-            <div>
-              <Collapse
-                title="Description"
-                content={dataAccomodation.description}
-              />
-            </div>
-            <div>
-              <Collapse
-                title="Équipements"
-                content={dataAccomodation.equipments}
-              />
-            </div>
+            <Collapse
+              title="Description"
+              content={dataAccomodation.description}
+            />
+            <Collapse
+              title="Équipements"
+              content={dataAccomodation.equipments}
+            />
           </div>
         </>
       ))}
