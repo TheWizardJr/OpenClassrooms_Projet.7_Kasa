@@ -1,48 +1,5 @@
 @use "../../assets/styles/mixins" as mixin;
 
-.carroussel {
-  position: relative;
-  max-width: 1240px;
-  width: 100%;
-  height: 415px;
-  img {
-    border-radius: var(--border-radius-1);
-  }
-  @include mixin.sm-lt {
-    height: 255px;
-  }
-  i {
-    position: absolute;
-    bottom: 50%;
-    transform: translateY(50%);
-    font-size: 50px;
-    color: white;
-    cursor: pointer;
-    z-index: 10;
-    padding-inline: 23px;
-    cursor: pointer;
-    &.left {
-      left: 0;
-    }
-    &.right {
-      right: 0;
-    }
-    @include mixin.sm-lt {
-      font-size: 30px;
-    }
-  }
-  p {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    color: white;
-    font-size: 18px;
-    text-align: center;
-    @include mixin.sm-lt {
-      display: none;
-    }
-  }
-}
 
 .informations {
   max-width: 1240px;

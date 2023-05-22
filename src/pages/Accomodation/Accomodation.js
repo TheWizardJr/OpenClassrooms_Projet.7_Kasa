@@ -2,6 +2,7 @@ import styles from "./Accomodation.module.scss";
 import { data } from "../../data/accomodations";
 import Collapse from "../../components/Collapse/Collapse";
 import { useParams } from "react-router-dom";
+import Slider from "../../components/Slider/Slider";
 
 function Accomodation() {
   const idAccomodation = useParams().id;
@@ -10,17 +11,9 @@ function Accomodation() {
 
   return (
     <main className="container">
+      <Slider />
       {dataAccomodation.map((dataAccomodation) => (
         <>
-          <div className={styles.carroussel}>
-            <img
-              src={dataAccomodation.pictures[0]}
-              alt={dataAccomodation.title}
-            />
-            <i className={`fas fa-chevron-left ${styles.left}`}></i>
-            <i className={`fas fa-chevron-right ${styles.right}`}></i>
-            <p>1/4</p>
-          </div>
           <div className={styles.informations}>
             <div>
               <h2>{dataAccomodation.title}</h2>
