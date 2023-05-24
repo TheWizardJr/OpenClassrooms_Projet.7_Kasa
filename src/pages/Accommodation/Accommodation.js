@@ -1,26 +1,26 @@
-import styles from "./Accomodation.module.scss";
-import { data } from "../../data/accomodations";
+import styles from "./Accommodation.module.scss";
+import { data } from "../../data/accommodations";
 import Collapse from "../../components/Collapse/Collapse";
 import { useParams } from "react-router-dom";
 import Slider from "../../components/Slider/Slider";
 import Rating from "../../components/Rating/Rating";
 
-function Accomodation() {
-  const idAccomodation = useParams().id;
-  const dataAccomodation = data.filter((data) => data.id === idAccomodation);
-  const hostName = dataAccomodation[0].host.name.split(" ");
+function Accommodation() {
+  const idAccommodation = useParams().id;
+  const dataAccommodation = data.filter((data) => data.id === idAccommodation);
+  const hostName = dataAccommodation[0].host.name.split(" ");
 
   return (
     <main className="container">
       <Slider />
-      {dataAccomodation.map((dataAccomodation) => (
+      {dataAccommodation.map((dataAccommodation) => (
         <>
           <div className={styles.informations}>
             <div>
-              <h2>{dataAccomodation.title}</h2>
-              <p>{dataAccomodation.location}</p>
+              <h2>{dataAccommodation.title}</h2>
+              <p>{dataAccommodation.location}</p>
               <div className={styles.tag}>
-                {dataAccomodation.tags.map((tag) => (
+                {dataAccommodation.tags.map((tag) => (
                   <div>{tag}</div>
                 ))}
               </div>
@@ -32,19 +32,19 @@ function Accomodation() {
                     <p>{name}</p>
                   ))}
                 </div>
-                <img src={dataAccomodation.host.picture} alt="" />
+                <img src={dataAccommodation.host.picture} alt="" />
               </div>
-              <Rating rating={dataAccomodation.rating} />
+              <Rating rating={dataAccommodation.rating} />
             </div>
           </div>
           <div className={styles.collapse}>
             <Collapse
               title="Description"
-              content={dataAccomodation.description}
+              content={dataAccommodation.description}
             />
             <Collapse
               title="Équipements"
-              content={dataAccomodation.equipments}
+              content={dataAccommodation.equipments}
             />
           </div>
         </>
@@ -53,4 +53,4 @@ function Accomodation() {
   );
 }
 
-export default Accomodation;
+export default Accommodation;

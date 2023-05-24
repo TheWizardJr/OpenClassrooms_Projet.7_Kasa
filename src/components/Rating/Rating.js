@@ -1,7 +1,6 @@
 import styles from "./Rating.module.scss";
 
-function Rating(dataAccomodation) {
-  
+function Rating(dataAccommodation) {
   function renderRatingStars(rating) {
     const starCount = 5;
     const fullStar = "fas fa-star";
@@ -20,7 +19,7 @@ function Rating(dataAccomodation) {
 
   return (
     <div className={styles.rating}>
-      {renderRatingStars(dataAccomodation.rating)}
+      {renderRatingStars(dataAccommodation.rating)}
     </div>
   );
 }

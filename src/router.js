@@ -4,7 +4,7 @@ import App from "./App";
 
 const Homepage = lazy(() => import("./pages/Homepage/Homepage"));
 const About = lazy(() => import("./pages/About/About"));
-const Accomodation = lazy(() => import("./pages/Accomodation/Accomodation"));
+const Accommodation = lazy(() => import("./pages/Accommodation/Accommodation"));
 const NotFound = lazy(() => import("./pages/NotFound/NotFound"));
 
 export const router = createBrowserRouter([
@@ -21,13 +21,13 @@ export const router = createBrowserRouter([
         element: <About />,
       },
       {
-        path: "/accomodation/:id",
-        element: <Accomodation />,
+        path: "/accommodation/:id",
+        element: <Accommodation />,
       },
       {
         path: "*",
         element: <NotFound />,
-      }
+      },
     ],
   },
 ]);

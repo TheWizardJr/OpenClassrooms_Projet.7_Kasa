@@ -1,11 +1,11 @@
 import Banner from "../../components/Banner/Banner";
-import Galery from "../../components/Galery/Galery";
+import Gallery from "../../components/Gallery/Gallery";
 
 function Homepage() {
   return (
     <div className="flex-fill container">
       <Banner />
-      <Galery />
+      <Gallery />
     </div>
   );
 }
