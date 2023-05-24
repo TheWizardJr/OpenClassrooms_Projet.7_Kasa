@@ -1,54 +1,26 @@
-import styles from "./Accommodation.module.scss";
-import { data } from "../../data/accommodations";
-import Collapse from "../../components/Collapse/Collapse";
 import { useParams } from "react-router-dom";
+import Collapse from "../../components/Collapse/Collapse";
 import Slider from "../../components/Slider/Slider";
-import Rating from "../../components/Rating/Rating";
+import { data } from "../../data/accommodations";
+import styles from "./Accommodation.module.scss";
+import AccommodationInformations from "../../components/AccommodationInformations/AccommodationInformations";
 
 function Accommodation() {
-  const idAccommodation = useParams().id;
-  const dataAccommodation = data.filter((data) => data.id === idAccommodation);
-  const hostName = dataAccommodation[0].host.name.split(" ");
+  const { id } = useParams();
+  const accommodation = data.find((item) => item.id === id);
 
   return (
     <main className="container">
       <Slider />
-      {dataAccommodation.map((dataAccommodation) => (
+      {accommodation && (
         <>
-          <div className={styles.informations}>
-            <div>
-              <h2>{dataAccommodation.title}</h2>
-              <p>{dataAccommodation.location}</p>
-              <div className={styles.tag}>
-                {dataAccommodation.tags.map((tag) => (
-                  <div>{tag}</div>
-                ))}
-              </div>
-            </div>
-            <div className={styles.host}>
-              <div className={styles.hostInformations}>
-                <div>
-                  {hostName.map((name) => (
-                    <p>{name}</p>
-                  ))}
-                </div>
-                <img src={dataAccommodation.host.picture} alt="" />
-              </div>
-              <Rating rating={dataAccommodation.rating} />
-            </div>
-          </div>
+          <AccommodationInformations accommodation={accommodation} />
           <div className={styles.collapse}>
-            <Collapse
-              title="Description"
-              content={dataAccommodation.description}
-            />
-            <Collapse
-              title="Équipements"
-              content={dataAccommodation.equipments}
-            />
+            <Collapse title="Description" content={accommodation.description} />
+            <Collapse title="Équipements" content={accommodation.equipments} />
           </div>
         </>
-      ))}
+      )}
     </main>
   );
 }

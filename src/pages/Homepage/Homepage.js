@@ -3,10 +3,10 @@ import Gallery from "../../components/Gallery/Gallery";
 
 function Homepage() {
   return (
-    <div className="flex-fill container">
+    <main className="flex-fill container">
       <Banner />
       <Gallery />
-    </div>
+    </main>
   );
 }
 

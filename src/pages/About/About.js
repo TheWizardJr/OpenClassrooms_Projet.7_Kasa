@@ -4,17 +4,21 @@ import { data } from "../../data/about";
 import styles from "./About.module.scss";
 
 function About() {
-  const about = data;
+  const aboutData = data;
 
   return (
-    <div className="container flex-fill">
+    <main className="container flex-fill">
       <Banner />
-      <main className={styles.about}>
-        {about.map((about) => (
-          <Collapse key={about.id} title={about.title} content={about.description} />
+      <div className={styles.about}>
+        {aboutData.map((item) => (
+          <Collapse
+            key={item.id}
+            title={item.title}
+            content={item.description}
+          />
         ))}
-      </main>
-    </div>
+      </div>
+    </main>
   );
 }
 
