@@ -3,7 +3,7 @@ import Gallery from "../../components/Gallery/Gallery";
 
 function Homepage() {
   return (
-    <main className="flex-fill container">
+    <main className="container">
       <Banner />
       <Gallery />
     </main>

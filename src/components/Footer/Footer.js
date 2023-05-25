@@ -3,9 +3,7 @@ import styles from "./Footer.module.scss";
 
 function Footer() {
   return (
-    <footer
-      className={`${styles.footer} d-flex flex-column align-items-center`}
-    >
+    <footer className={styles.footer}>
       <div>
         <img src={footerlogo} alt="" />
       </div>

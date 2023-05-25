@@ -7,7 +7,7 @@ function About() {
   const aboutData = data;
 
   return (
-    <main className="container flex-fill">
+    <main className="container">
       <Banner />
       <div className={styles.about}>
         {aboutData.map((item) => (
