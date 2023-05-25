@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import Collapse from "../../components/Collapse/Collapse";
 import Slider from "../../components/Slider/Slider";
 import { data } from "../../data/accommodations";
@@ -8,6 +8,10 @@ import AccommodationInformations from "../../components/AccommodationInformation
 function Accommodation() {
   const { id } = useParams();
   const accommodation = data.find((item) => item.id === id);
+
+  if (!accommodation) {
+    return <Navigate to="*" />;
+  }
 
   return (
     <main className="container">
